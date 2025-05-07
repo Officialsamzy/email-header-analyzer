@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Header Analyzer</title>
+</head>
+<body>
+    <h2>Email Header Analyzer</h2>
+    <form method="POST">
+        <textarea name="headers" rows="15" cols="100" placeholder="Paste raw email headers here"></textarea><br>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if result %}
+        <h3>Analysis Result:</h3>
+        <ul>
+            {% for item in result %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
